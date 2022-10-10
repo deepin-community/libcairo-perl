@@ -1,0 +1,46 @@
+Source: libcairo-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Dominic Hargreaves <dom@earth.li>,
+           intrigeri <intrigeri@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               libcairo2-dev,
+               libextutils-depends-perl,
+               libextutils-pkgconfig-perl,
+               libfont-freetype-perl <!nocheck>,
+               libtest-number-delta-perl <!nocheck>,
+               perl-xs-dev,
+               perl:native,
+               ttf-bitstream-vera <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libcairo-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libcairo-perl.git
+Homepage: http://gtk2-perl.sourceforge.net/
+Rules-Requires-Root: no
+
+Package: libcairo-perl
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends}
+Suggests: libfont-freetype-perl
+Description: Perl interface to the Cairo graphics library
+ libcairo-perl provides access to the Cairo library.
+ .
+ Cairo is a 2D graphics library with support for multiple
+ output devices. It is designed to produce consistent output
+ on all output media while taking advantage of display hardware
+ acceleration when available (eg. through the X Render Extension).
+ .
+ The cairo API provides operations similar to the drawing
+ operators of PostScript and PDF. Operations in cairo including
+ stroking and filling cubic Bézier splines, transforming and compositing
+ translucent images, and antialiased text rendering. All drawing
+ operations can be transformed by any affine transformation (scale,
+ rotation, shear, etc.)
+ .
+ Find out more about Cairo at http://www.cairographics.org/.
